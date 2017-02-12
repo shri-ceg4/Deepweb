@@ -164,6 +164,9 @@ public class Parser {
                     //System.out.println(fname + "   :   " + attribs.getBookAttribs(forms.get(fname)));
                     System.out.println(fname + "   :   " + attribs.getBloodBankAttribs(forms.get(fname)));
                 }
+               PageRedirect p=new PageRedirect();
+               System.out.println(p.compareAttributes("home", "house"));
+               
     }
             
             
