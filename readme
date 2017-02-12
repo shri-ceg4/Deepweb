@@ -3,3 +3,10 @@ attributes.getBookAttribs  --    get attributes  book domain
 attributes.getBloodBankAttribs -- get attributes blood bank domain
 
 pageRedirect.compareAttributes(word1,word2)  -- return similarity % two attribs
+
+For PageRedirect java file, the jars to be added:
+htmlunit version 2.24
+
+add these two jars if something went wrong in PageRedirect file
+commons-logging version 1.2
+junit
