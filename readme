@@ -1,0 +1,5 @@
+attributes.getBookAttribs  --    get attributes  book domain
+
+attributes.getBloodBankAttribs -- get attributes blood bank domain
+
+pageRedirect.compareAttributes(word1,word2)  -- return similarity % two attribs
