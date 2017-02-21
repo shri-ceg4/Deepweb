@@ -29,7 +29,7 @@ import java.util.regex.Pattern;
  * @author acer
  */
 public class PageRedirect {
-    public static void main(String args[]) throws IOException
+    int estimate(String w1,String w2)
     {
         final Logger log = Logger.getLogger(
         Thread.currentThread().getStackTrace()[0].getClassName() );
@@ -41,8 +41,8 @@ public class PageRedirect {
         webClient.getOptions().setJavaScriptEnabled(true);
         HtmlInput word1=page.getHtmlElementById("expression1");
         HtmlInput word2=page.getHtmlElementById("expression2");
-        word1.setValueAttribute("house");
-        word2.setValueAttribute("home");
+        word1.setValueAttribute(w1);
+        word2.setValueAttribute(w2);
         HtmlButton submit = page.getHtmlElementById("submit-button");
         webClient.waitForBackgroundJavaScript(30000);
         HtmlPage result = submit.click();
@@ -62,7 +62,9 @@ public class PageRedirect {
             text= element.getTextContent();
         }
     }
+            
     System.out.println(text+" % ");
+      return Integer.parseInt(text);
     }
     catch(Exception e)
     {
